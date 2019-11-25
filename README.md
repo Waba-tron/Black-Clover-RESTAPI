@@ -131,8 +131,7 @@ let url = `http://localhost:3000/Footballers`;
 
 ## Step 4 (Manipulate the DOM)
 So the way that this works is that you have a input that loops through a list of footballers coming from the fetch command. I used a function for this that takes in two parameters. id being your input and the data being the list of footballers. Your input loops through 
-the list and checks if the input matchs a id name. If is dose stop the loop and collect that data id and manipulate the dom, if not display footballer and dosent exist
-
+the list and checks if the input matchs a id name. If the input id dose match with a name, stop the loop, collect that data and then manipulate the DOM
 ```
 //Render Footballer
 function displayFootballer(data, id) {
