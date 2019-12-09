@@ -20,7 +20,7 @@ So if you really wanted to, what I would recommend creating your own data. First
 You can use the terminal, but I really recommed a thrid party software I used called [Robo-3t](https://robomongo.org/) It makes creating a database super easy and helps keep track of the data.
 
 Once you created your database its super easy after that. Ive already done the heavy lifting. All you need to do is plug in the url of your database and you can start adding characters.
-```
+```javascript
 mongoose.connect("mongodb://localhost:27017/youdatabase", {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -33,7 +33,7 @@ So this RESTAPI can be easily customisable to cator for all types of data. Dosen
 
 Current Schema
 
-```
+```javascript
 const characterSchema = {
 
     name: String,
@@ -51,7 +51,7 @@ const Character = mongoose.model("Character", characterSchema);
 
 New Schema
 
-```
+```javascript
 const footballerSchema = {
 
     name: String,
@@ -70,7 +70,7 @@ const Footballer = mongoose.model("Footballer", footballerSchema);
 Since way this application queries data is by using the Fetch method, it would be necessary to actually change name of the url
 
 Current
-```
+```javascript
 //List all Json data of characters 
 app.get("/Characters", function(req, res){
 
@@ -93,7 +93,7 @@ app.get("/Characters", function(req, res){
 ```
 
 New
-```
+```javascript
 //List all Json data of characters 
 app.get("/Footballers", function(req, res){
 
@@ -120,7 +120,7 @@ If you go in to the script.js file you find a varible called url
 
 Current
 
-```
+```javascript
 let url = `http://localhost:3000/Characters`;
 ```
 New
@@ -132,7 +132,7 @@ let url = `http://localhost:3000/Footballers`;
 ## Step 4 (Manipulate the DOM)
 So the way that this works is that you have a input that loops through a list of footballers coming from the fetch command. I used a function for this that takes in two parameters. id being your input and the data being the list of footballers. Your input loops through 
 the list and checks if the input matchs a id name. If the input id dose match with a name, stop the loop, collect that data and then manipulate the DOM
-```
+```javascript
 //Render Footballer
 function displayFootballer(data, id) {
 
